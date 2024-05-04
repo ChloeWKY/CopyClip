@@ -13,6 +13,7 @@ preferences:
   language: Language
   search_clip_per_batch: Search Clips Per Batch
   enable_auto_delete_duplications: Enable Auto Delete Duplications
+  show_advanced: Hidden Advanced Preferences
 
 head_bar:
   preferences: Preferences

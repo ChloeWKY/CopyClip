@@ -9,6 +9,7 @@ preferences:
   language: 语言
   search_clip_per_batch: 每次搜索的数量
   enable_auto_delete_duplications: 自动删除重复记录
+  show_advanced: 显示高级设置
 
 head_bar:
   preferences: 设置

@@ -9,6 +9,7 @@ preferences:
   language: 语言
   search_clip_per_batch: 每次搜索的数量
   enable_auto_delete_duplications: 自动删除重复记录
+  show_advanced: 显示高级设置
 
 head_bar:
   preferences: 设置
@@ -36,6 +37,36 @@ search:
   max_id: 最大ID
   press_to_search: 搜索
 
+help:
+  title: 帮助
+  app_icon_title: 应用图标
+  app_icon: 应用图标始终显示在系统任务栏中。
+  open_menu_tray_title: 打开菜单栏
+  open_menu_tray: 右键单击应用图标以打开菜单栏。单击菜单项以选择要粘贴的记录。
+  open_window_title: 打开窗口
+  open_window: 单击“设置”、“搜索”或“帮助”菜单项以打开相应窗口。 
+    一旦打开了一个窗口，您也可以使用顶部栏按钮在窗口之间切换。
+  pause_monitoring_title: 暂停记录
+  pause_monitoring: 单击“暂停记录”菜单项以阻止更新剪贴板历史记录；单击“恢复记录”以继续更新列表。
+  search_title: 搜索
+  search: 在“搜索”窗口中，您可以按文本、时间、分数等查找记录。 
+    如果搜索框为空，则将显示“搜索数量”条最新记录。
+  pinned_clips_title: 置顶记录
+  pinned_clips: 在“搜索”窗口中，找到记录后， 
+    您可以通过单击“置顶”按钮来置顶记录。 
+    置顶记录将始终显示在最靠近系统任务栏的位置。
+  favourites_title: 收藏夹
+  favourites: 在“搜索”窗口中，找到记录后， 
+    您可以点击爱心图标来收藏记录。 
+    之后您可以在“收藏夹”中查看这些记录。
+  auto_delete_duplications_title: 自动删除重复记录
+  auto_delete_duplications: 启用后，将自动删除重复的记录。
+  clips_per_page_title: 每页记录数量
+  clips_per_page: 定义托盘中每页显示的剪贴板历史记录的数量, 最大值为50。显示过多可能会导致系统托盘菜单溢出。
+  max_clip_len_title: 每条记录在系统任务栏中显示的最大长度
+  max_clip_len: 定义托盘中显示的剪贴板记录的最大长度。超过此长度的记录将被截断。
+  more_info: 更多详情请查看
+
 export:
   export_button: 导出数据到下载文件夹
 
@@ -48,7 +79,7 @@ log_level:
   error: 错误
 
 tray_menu:
-  notice_select: 选择您要粘贴的记录。
+  notice_select: 点击选择要粘贴的记录
   favourite: 收藏夹
   pause_monitoring: 暂停记录
   resume_monitoring: 恢复记录

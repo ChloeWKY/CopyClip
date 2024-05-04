@@ -1,4 +1,4 @@
-use yew::{function_component, html, Html};
+use yew::{function_component, html, use_state, Callback, Html};
 
 use crate::components::{
     head_bar::HeadBar,
@@ -13,6 +13,9 @@ use crate::components::{
 
 #[function_component(Preferences)]
 pub fn preferences() -> Html {
+    let show_advanced = use_state(|| false);
+    let show_advanced_clone = show_advanced.clone();
+
     html! {
         <div class="flex min-h-screen flex-col">
             <HeadBar></HeadBar>
@@ -27,16 +30,25 @@ pub fn preferences() -> Html {
                 <AutoDeleteDuplications></AutoDeleteDuplications>
                 <br />
                 <LanguagesConfig></LanguagesConfig>
-                <br />
-                <ExportButton></ExportButton>
             </div>
-
-            <h2 class="text-center text-4xl m-0">{ t!("preferences.advanced_title") }</h2>
-            <div class="mx-5 my-2">
-                <LogLevelFilterConfig></LogLevelFilterConfig>
-                <br />
-                <SearchClipPerBatchConfig></SearchClipPerBatchConfig>
-            </div>
+                <a class="cursor-pointer text-center text-gray-400 block"
+                onclick={Callback::from(move |_| show_advanced_clone.set(!*show_advanced_clone))}>
+                { t!("preferences.show_advanced") }</a>
+            {
+                if *show_advanced {
+                    html! {
+                        <div class="mx-5 my-2">
+                            <ExportButton></ExportButton>
+                            <br />
+                            <LogLevelFilterConfig></LogLevelFilterConfig>
+                            <br />
+                            <SearchClipPerBatchConfig></SearchClipPerBatchConfig>
+                        </div>
+                    }
+                } else {
+                    html! {}
+                }
+            }
         </div>
     }
 }

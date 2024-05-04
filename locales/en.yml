@@ -13,6 +13,7 @@ preferences:
   language: Language
   search_clip_per_batch: Search Clips Per Batch
   enable_auto_delete_duplications: Enable Auto Delete Duplications
+  show_advanced: Hidden Advanced Preferences
 
 head_bar:
   preferences: Preferences
@@ -40,6 +41,46 @@ search:
   max_id: Max Id
   press_to_search: Press To Search
 
+help:
+  title: Help
+  app_icon_title: App Icon
+  app_icon: The app icon is always displayed in the system tray.
+  open_menu_tray_title: Open Menu Tray
+  open_menu_tray: Right-click on the app icon to open the menu tray. 
+    Click on a menu item to select the clip you want to paste.
+  open_window_title: Open Window
+  open_window: Click on one of the "Preferences," "Search," or "Help" menu items 
+    to open the corresponding window. You can also use the top bar buttons to 
+    switch between windows once a window is open.
+  pause_monitoring_title: Pause Monitoring
+  pause_monitoring: Click on the "Pause Monitoring" menu item to stop the clipboard 
+    history from being updated; click "Resume Monitoring" to continue updating 
+    the list.
+  search_title: Search
+  search: In the "Search" window, you can look for clips by text, time, score, etc. 
+    If the search box is empty, the most recent clips up to the "Number of Results" 
+    will be displayed.
+  pinned_clips_title: Pinned Clips
+  pinned_clips: In the "Search" window, after finding clips, 
+    you can pin a clip by clicking on the "Pin" button. 
+    Pinned clips will always appear closest to the system tray.
+  favourites_title: Favourites
+  favourites: In the "Search" window, after finding clips, 
+    you can mark a clip as a favorite by clicking on the "Favorite" button. 
+    Favorited clips will always be accessible through a submenu 
+    under the "Favorites" menu item.
+  auto_delete_duplications_title: Auto Delete Duplications
+  auto_delete_duplications: In the "Preferences" window, you can enable the 
+    "Auto Delete Duplications" option to automatically remove duplicate clips 
+    from the clipboard history.
+  clips_per_page_title: Clips Per Page
+  clips_per_page: Defines the number of clips to display on one page in the tray, 
+    with a maximum value of 50. Displaying too many can cause the system tray menu to overflow.
+  max_clip_len_title: Max Clip Length
+  max_clip_len: Defines the maximum length of a clip to be displayed in the tray. 
+    Clips longer than this length will be truncated.
+  more_info: For more information please visit the repo on 
+
 export:
   export_button: Press To Export Data to ~/Downloads
 
@@ -52,7 +93,7 @@ log_level:
   error: Error
 
 tray_menu:
-  notice_select: Select the clip you want to paste.
+  notice_select: Click to select the clip you want to paste.
   favourite: Favorite
   pause_monitoring: Pause Monitoring
   resume_monitoring: Resume Monitoring

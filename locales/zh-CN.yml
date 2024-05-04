@@ -48,7 +48,7 @@ log_level:
   error: 错误
 
 tray_menu:
-  notice_select: 选择您要粘贴的记录。
+  notice_select: 点击选择要粘贴的记录
   favourite: 收藏夹
   pause_monitoring: 暂停记录
   resume_monitoring: 恢复记录

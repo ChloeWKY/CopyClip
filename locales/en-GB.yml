@@ -52,7 +52,7 @@ log_level:
   error: Error
 
 tray_menu:
-  notice_select: Select the clip you want to paste.
+  notice_select: Click to select the clip you want to paste.
   favourite: Favourite
   pause_monitoring: Pause Monitoring
   resume_monitoring: Resume Monitoring

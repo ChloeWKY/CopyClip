@@ -52,7 +52,7 @@ log_level:
   error: Fehler
 
 tray_menu:
-  notice_select: Wählen Sie den Clip aus, den Sie einfügen möchten.
+  notice_select: Klicken sie, um die gewünschte datei auszuwählen.
   favourite: Favorit
   pause_monitoring: Überwachung pausieren
   resume_monitoring: Überwachung fortsetzen

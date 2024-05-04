@@ -68,6 +68,10 @@ help:
     you can mark a clip as a favorite by clicking on the "Favorite" button. 
     Favorited clips will always be accessible through a submenu 
     under the "Favorites" menu item.
+  auto_delete_duplications_title: Auto Delete Duplications
+  auto_delete_duplications: In the "Preferences" window, you can enable the 
+    "Auto Delete Duplications" option to automatically remove duplicate clips 
+    from the clipboard history.
 
 export:
   export_button: Press To Export Data to ~/Downloads

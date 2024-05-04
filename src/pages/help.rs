@@ -37,6 +37,10 @@ pub fn help() -> Html {
 
                 <h3 class="text-left text-2xl m-0">{ t!("help.favourites_title")}</h3>
                 <div class="mx-3 my-2 text-2x">{ t!("help.favourites")}</div>
+                <br />
+
+                <h3 class="text-left text-2xl m-0">{ t!("help.auto_delete_duplications_title")}</h3>
+                <div class="mx-3 my-2 text-2x">{ t!("help.auto_delete_duplications")}</div>
             </div>
         </div>
     }

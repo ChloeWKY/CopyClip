@@ -68,6 +68,10 @@ help:
     indem Sie auf die Schaltfläche "Favorit" klicken. 
     Favorisierte Clips sind jederzeit über ein Untermenü 
     unter dem Menüpunkt "Favoriten" zugänglich.
+  auto_delete_duplications_title: Duplikate automatisch löschen
+  auto_delete_duplications: Im "Einstellungen"-Fenster können Sie 
+    die Option "Doppelte Einträge automatisch löschen" aktivieren, 
+    um Duplikate automatisch aus der Zwischenablagehistorie zu entfernen.
 
 export:
   export_button: Drücke um deine Daten nach ~/Downloads zu exportieren

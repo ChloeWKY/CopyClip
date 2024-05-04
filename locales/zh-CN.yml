@@ -61,6 +61,11 @@ help:
     之后您可以在“收藏夹”中查看这些记录。
   auto_delete_duplications_title: 自动删除重复记录
   auto_delete_duplications: 启用后，将自动删除重复的记录。
+  clips_per_page_title: 每页记录数量
+  clips_per_page: 定义托盘中每页显示的剪贴板历史记录的数量, 最大值为50。显示过多可能会导致系统托盘菜单溢出。
+  max_clip_len_title: 每条记录在系统任务栏中显示的最大长度
+  max_clip_len: 定义托盘中显示的剪贴板记录的最大长度。超过此长度的记录将被截断。
+  more_info: 更多详情请查看
 
 export:
   export_button: 导出数据到下载文件夹

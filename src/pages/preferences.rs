@@ -31,9 +31,9 @@ pub fn preferences() -> Html {
                 <br />
                 <LanguagesConfig></LanguagesConfig>
             </div>
-            <a class="cursor-pointer text-center text-gray-300 block" 
+                <a class="cursor-pointer text-center text-gray-400 block"
                 onclick={Callback::from(move |_| show_advanced_clone.set(!*show_advanced_clone))}>
-                { t!("preferences.show_advanced") }</a>            
+                { t!("preferences.show_advanced") }</a>
             {
                 if *show_advanced {
                     html! {

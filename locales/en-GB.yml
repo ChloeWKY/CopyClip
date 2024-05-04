@@ -73,6 +73,13 @@ help:
   auto_delete_duplications: In the "Preferences" window, you can enable the 
     "Auto Delete Duplications" option to automatically remove duplicate clips 
     from the clipboard history.
+  clips_per_page_title: Clips Per Page
+  clips_per_page: Defines the number of clips to display on one page in the tray, 
+    with a maximum value of 50. Displaying too many can cause the system tray menu to overflow.
+  max_clip_len_title: Max Clip Length
+  max_clip_len: Defines the maximum length of a clip to be displayed in the tray. 
+    Clips longer than this length will be truncated.
+  more_info: For more information please visit the repo on 
 
 export:
   export_button: Press To Export Data to ~/Downloads

@@ -73,6 +73,14 @@ help:
   auto_delete_duplications: Im "Einstellungen"-Fenster können Sie 
     die Option "Doppelte Einträge automatisch löschen" aktivieren, 
     um Duplikate automatisch aus der Zwischenablagehistorie zu entfernen.
+  clips_per_page_title: Clips pro Seite
+  clips_per_page: Legt die Anzahl der Clips fest, die auf einer Seite im Tray angezeigt werden, 
+    mit einem Höchstwert von 50. Zu viele anzuzeigende Clips können dazu führen, 
+    dass das System-Tray-Menü überläuft.
+  max_clip_len_title: Maximale Clip Länge
+  max_clip_len: Definiert die maximale Länge eines Clips, der im Tray angezeigt wird. 
+    Clips, die länger als diese Länge sind, werden gekürzt.
+  more_info: Für weitere Informationen besuchen Sie bitte das Repo auf 
 
 export:
   export_button: Drücke um deine Daten nach ~/Downloads zu exportieren

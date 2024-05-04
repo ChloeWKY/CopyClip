@@ -61,6 +61,25 @@ pub fn help() -> Html {
                     <h3 class="text-left text-2xl m-0">{ t!("help.auto_delete_duplications_title")}</h3>
                 </div>
                 <div class="mx-3 my-2 text-2x">{ t!("help.auto_delete_duplications")}</div>
+                <br />
+
+                <div class="flex items-center">
+                    <h3 class="text-left text-2xl m-0">{ t!("help.clips_per_page_title")}</h3>
+                </div>
+                <div class="mx-3 my-2 text-2x">{ t!("help.clips_per_page")}</div>
+                <br />
+
+                <div class="flex items-center">
+                    <h3 class="text-left text-2xl m-0">{ t!("help.max_clip_len_title")}</h3>
+                </div>
+                <div class="mx-3 my-2 text-2x">{ t!("help.max_clip_len")}</div>
+                <br />
+
+                <div class="mx-3 my-2 text-2x">
+                    { t!("help.more_info") }
+                    <a class="text-blue-500" href="https://github.com/Alex222222222222/CopyClip" target="_blank">{" GitHub"}</a>
+                    {"."}
+                </div>
             </div>
         </div>
     }

@@ -36,7 +36,7 @@ web-sys = { version = "0.3.67", features = [
 yew = { version = "0.21", features = ["csr"] }
 yewdux = "0.10.0"
 yew-router = "0.18"
-yew_icons = { version = "0.8", features = [
+yew_icons = { version = "0.8.0", features = [
   "HeroiconsOutlineClipboardDocumentList",
   "BootstrapTrash",
   "LucideTimer",
@@ -44,7 +44,8 @@ yew_icons = { version = "0.8", features = [
   "BootstrapHeartFill",
   "BootstrapHeart",
   "BootstrapPinAngle",
-  "BootstrapPinAngleFill"
+  "BootstrapPinAngleFill",
+  "FeatherPaperclip",
 ] }
 
 [profile.release]

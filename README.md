@@ -1,57 +1,52 @@
 # Copy Clip
 
-A cross-platform and feature-rich app used to manage your clipboard history.
+A cross-platform, feature-rich app designed to manage your clipboard history.
 
 ## Disclaimer
 
-### Issues and Bugs
-
-This app is still under development,
-and have some known issues and known bugs.
-
 ### Privacy
 
-This app only store your clipboard history locally,
-and will not send any data to any server.
+This app stores your clipboard history locally
+and will not send any data to servers.
 
-This is an open source project,
-you can check the source code to make sure that we are not doing anything bad.
+This is an open-source project,
+and you can review the source code to ensure no malpractice.
 
-Or, if you are not familiar with rust,
-you can use [WireShark](https://www.wireshark.org/)
-or any other packet capture tools to monitor the network traffic of the app.
+Alternatively, if you are not familiar with Rust,
+you can use [Wireshark](https://www.wireshark.org/)
+or any other packet capture tools to monitor the app's network traffic.
 
-Or, on MacOS, you can use the system `Activity Monitor`
-to monitor the network traffic of the app.
+On MacOS, you can use the system `Activity Monitor`
+to monitor the app's network traffic.
 ![Activity Monitor](./docs/imgs/macos_system_activity_monitor.png)
 
-Or, on Windows, you can use the system `Task Manager`
-to monitor the network traffic of the app.
+On Windows, you can use the system `Task Manager`
+to monitor the app's network traffic.
 ![Task Manager](./docs/imgs/windows_system_task_manager.png)
 
 ## Feedbacks
 
-If you have any feedbacks, 
-including requests for new features, reports for bugs, and so on,
+If you have any feedback,
+including feature requests, bug reports, etc.,
 please open an [issue](https://github.com/Alex222222222222/CopyClip/issues).
 
-We will try our best to solve the problem.
+We will do our best to address the issue.
 
 ## Configuration
 
-This is some explanation for configurations in the app.
+Below is an explanation of the app's configurations.
 
-| name | default value | description |
-| ---- | ------------- | ----------- |
-| clips per page | 20 | This define how much clips to show in one page in the tray, the maximum value is 50. As if the value is too big, the system tray menu will overflow. |
-| max clip length | 50 | when a clip is too long, we cut it to under max-clip-length to fit it into the tray |
-| log level filter | info | the log level of the app. `trace`, `info`, `debug`, `warn`, `error`, `off` from most detailed to less |
-| dark mode | off | switch the dark mode on and off |
-| Enable Auto Delete Duplications | false | if this is true, when a clip is copied, if it is already in the history, the history clip will be deleted |
-| Pinned Clips Add | None | Some text to be pinned |
-| Pinned Clips Remove | None | The text of the pinned clip that you want to remove |
+| Name                        | Default Value | Description                                                                                      |
+|-----------------------------|---------------|--------------------------------------------------------------------------------------------------|
+| clips per page              | 20            | Defines the number of clips to display on one page in the tray, with a maximum value of 50. Displaying too many can cause the system tray menu to overflow. |
+| max clip length             | 50            | When a clip is too long, it's truncated to stay under max-clip-length to fit in the tray.       |
+| log level filter            | info          | Sets the app's log level: `trace`, `info`, `debug`, `warn`, `error`, `off`—from most to least detailed. |
+| dark mode                   | off           | Toggles dark mode on or off.                                                                     |
+| Enable Auto Delete Duplications | false    | If set to true, the app will delete a previous instance of a clip if it is copied again.        |
+| Pinned Clips Add            | None          | Text to be pinned.                                                                               |
+| Pinned Clips Remove         | None          | Text of the pinned clip you want to remove.                                                      |
 
-More configurations is on the way.
+More configuration options are on the way.
 
 ## Install
 
@@ -62,14 +57,14 @@ Pre-built binaries can be found in [releases](https://github.com/Alex22222222222
 
 ### MacOS
 
-As `sqlite3` is already installed by the system,
-there is no need to install any dependency.
+Since `sqlite3` is pre-installed on the system,
+no additional dependencies are needed.
 
-Just copy the app to the application folder.
+Simply copy the app to the Applications folder.
 
 ### Linux
 
-`xcb`dependency is needed, to monitor the clipboard.
+The `xcb` dependency is required to monitor the clipboard.
 
 Use `dpkg` to install the `deb` bundle.
 
@@ -77,11 +72,11 @@ Use `dpkg` to install the `deb` bundle.
 
 ### MacOS Security Policy
 
-The Mac aarch64 build may have a problem with the macOS security policy,
-apple need developer to buy a 99$ per year development program to
-let developer to be treated as trusted developer.
+The Mac aarch64 build may encounter issues with macOS security policies;
+Apple requires developers to join a $99/year program
+to be recognized as trusted.
 
-You may need to manually run the following command
+You may need to manually run the following commands:
 
 ```bash
 sudo spctl --master-disable
@@ -92,12 +87,11 @@ If the problem has not been solved, use the x64 build.
 
 ### Other Issues
 
-If you have any other issues, please open an issue with the log file attached,
-and information about your system.
+If you encounter additional issues, open an issue with the log file attached, and include details about your system.
 
-Also, please switch the log mod to `trace` to get the most detailed log.
+Please set the log mode to trace to record the most detailed log possible.
 
-The log file is located at `~/Library/Logs/org.eu.huazifan.copyclip/log`on MacOS.
+On MacOS, the log file is located at ~/Library/Logs/org.eu.huazifan.copyclip/log.
 
 ## Build
 
@@ -110,7 +104,7 @@ cd CopyClip
 
 ### Prerequisites
 
-You need to have the following installed:
+Ensure the following tools are installed:
 
 - Rust
 - Node.js
@@ -121,13 +115,12 @@ You need to have the following installed:
 - wasm-opt
 - tailwindcss
 
-To install `rust`,
-please refer to [rustup](https://www.rust-lang.org/tools/install).
+To install `Rust`, refer to [rustup](https://www.rust-lang.org/tools/install).
 
 To install `Node.js` and `npm`,
-please refer to [Get Node.js](https://nodejs.org/en/download).
+visit [Get Node.js](https://nodejs.org/en/download).
 
-Other dependencies can be installed by the following command:
+Install other dependencies with the following command:
 
 ```bash
 # wasm32-unknown-unknown
@@ -143,12 +136,12 @@ npm install
 For MacOS, install `XCode` and `XCode Command Line Tools`:
 
 ```bash
-# This will install XCode Command Line Tools
-# For XCode, please install it from App Store
+# Installing XCode Command Line Tools
+# XCode needs to be installed from App Store
 xcode-select --install
 ```
 
-For linux, you need to install extra dependency: - `libxcb*`
+For linux, you need to install additional dependencies: - `libxcb*`
 
 ```bash
 sudo apt-get update
@@ -158,8 +151,7 @@ sudo apt install libdbus-1-dev libwebkit2gtk-4.0-dev build-essential \
     libxcb-shape0-dev libxcb-xkb-dev libxcb-xfixes0-dev
 ```
 
-If you are using `NixOS`,
-you can use the following command in the current dir to install all the dependencies:
+For NixOS, use the following command in the current directory to install all dependencies:
 
 ```bash
 nix develop
@@ -171,25 +163,22 @@ nix develop
 cargo tauri build
 ```
 
-While building, there are some known issues on MacOS:
-- Failed to run custom build command for `mac-notification-sys v0.6.1`.
-  - This is a known issue, which sometimes caused by use of `nix` to manage dependencies.
-  - Myself currently also suffer from this issue, and still looking for a solution.
-  - For any progress, please refer to [this issue](https://github.com/Alex222222222222/CopyClip/issues/88).
-- Other issues related to `cc` or `ld`, try the following:
-  - `rm -rf ./target` and try rebuild again.
-  - `sudo rm -rf /Library/Developer/CommandLineTools` and install `XCode Command Line Tools` again, then try rebuild again.
+During the build process, you may encounter known issues on MacOS:
+- If `mac-notification-sys v0.6.1` fails to build, this is a known issue which is sometimes caused by using `nix`. We are currently seeking a solution. For updates, please refer to [this issue](https://github.com/Alex222222222222/CopyClip/issues/88).
+- If you run into problems with `cc` or `ld`, try the following:
+  - Delete the `./target` directory(`rm -rf ./target`) and rebuild.
+  - Remove `/Library/Developer/CommandLineTools` using `sudo rm -rf /Library/Developer/CommandLineTools`, reinstall `XCode Command Line Tools`, and then rebuild.
 
 ### Run
 
-To automatically rebuild the `TailwindCSS` when the source code changes,
-we need to run the following command in another terminal:
+To automatically rebuild `TailwindCSS` when the source code changes,
+run the following command in a separate terminal:
 
 ```bash
 npx tailwindcss -w
 ```
 
-Then, run the following command to start the app:
+Then, start the app with:
 
 ```bash
 cargo tauri dev
@@ -197,17 +186,17 @@ cargo tauri dev
 
 ## Contributing
 
-Check out [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) for more information.
+See [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) for more information.
 
 ## TODO
 
 - [x] Search Page
 - [x] Configuration Page
 - [ ] Explanation for configurations
-- [ ] Sign the app for MacOS build
-- [ ] Change the icon of the app so it can be seen in the white background
+- [ ] Sign the app for MacOS builds
+- [ ] Change the app icon so it is visible against white backgrounds
 - [x] Export the history to a file
-  - [ ] import the history
+  - [ ] History import functionality
 
 ## Contributors
 

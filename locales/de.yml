@@ -40,6 +40,35 @@ search:
   max_id: Max Id
   press_to_search: Suche starten
 
+help:
+  title: Hilfe
+  app_icon_title: App Symbol
+  app_icon: Das App-Symbol wird immer im System-Tray angezeigt.
+  open_menu_tray_title: Menü-Fach öffnen
+  open_menu_tray: Klicken Sie mit der rechten Maustaste auf das App-Symbol, um das Menü-Fach zu öffnen. 
+    Klicken Sie auf ein Menüelement, um den Clip auszuwählen, den Sie einfügen möchten.
+  open_window_title: Fenster öffnen
+  open_window: Klicken Sie auf eines der Menüelemente "Einstellungen", "Suche" oder "Hilfe", 
+    um das entsprechende Fenster zu öffnen. Sie können auch die Schaltflächen in der oberen Leiste verwenden, 
+    um zwischen den Fenstern zu wechseln, sobald ein Fenster geöffnet ist.
+  pause_monitoring_title: Überwachung pausieren
+  pause_monitoring: Klicken Sie auf das Menüelement "Überwachung pausieren", um zu verhindern, 
+    dass der Verlauf der Zwischenablage aktualisiert wird. Klicken Sie auf "Überwachung fortsetzen", 
+    um die Liste weiter zu aktualisieren.
+  search_title: Suche
+  search: Im Fenster "Suche" können Sie Clips nach Text, Zeit, Score usw. suchen. 
+    Wenn das Suchfeld leer ist, werden die neuesten Clips bis zu "Anzahl der Ergebnisse" angezeigt.
+  pinned_clips_title: Angeheftete Clips
+  pinned_clips: Im Fenster "Suche" können Sie nach dem Auffinden von Clips 
+    einen Clip anheften, indem Sie auf die Schaltfläche "Anheften" klicken. 
+    Angeheftete Clips werden immer am nächsten zum System-Tray angezeigt.
+  favourites_title: Favoriten
+  favourites: Im "Suchen"-Fenster können Sie, 
+    nachdem Sie Clips gefunden haben, einen Clip als Favoriten kennzeichnen, 
+    indem Sie auf die Schaltfläche "Favorit" klicken. 
+    Favorisierte Clips sind jederzeit über ein Untermenü 
+    unter dem Menüpunkt "Favoriten" zugänglich.
+
 export:
   export_button: Drücke um deine Daten nach ~/Downloads zu exportieren
 

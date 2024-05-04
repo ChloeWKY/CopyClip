@@ -102,9 +102,9 @@ pub fn create_tray_menu(
         .add_item(next_page)
         .add_item(first_page)
         .add_native_item(SystemTrayMenuItem::Separator)
-        .add_item(help)
         .add_item(preferences)
         .add_item(search)
+        .add_item(help)
         .add_item(pause)
         .add_native_item(SystemTrayMenuItem::Separator)
         .add_item(quit)
@@ -145,9 +145,9 @@ pub fn create_tray_menu(
         .add_item(quit)
         .add_native_item(SystemTrayMenuItem::Separator)
         .add_item(pause)
+        .add_item(help)
         .add_item(search)
         .add_item(preferences)
-        .add_item(help)
         .add_native_item(SystemTrayMenuItem::Separator)
         .add_item(first_page)
         .add_item(next_page)
@@ -243,11 +243,27 @@ pub async fn handle_menu_item_click(app: &AppHandle, id: String) {
             send_tray_update_event(app);
         }
         "help" => {
+            let windows = app.windows();
+            // hide the other windows
+            let window_search = windows.get("search");
+            let window_preferences = windows.get("preferences");
+            if let Some(window) = window_search {
+                let res = window.hide();
+                if let Err(e) = res {
+                    panic_app(&format!("Failed to hide search window: {e}"));
+                }
+            }
+            if let Some(window) = window_preferences {
+                let res = window.hide();
+                if let Err(e) = res {
+                    panic_app(&format!("Failed to hide preferences window: {e}"));
+                }
+            }
+
             // open the help window
             // test if the window is already open
-            let windows = app.windows();
-            let window = windows.get("help");
-            if let Some(window) = window {
+            let window_needed = windows.get("help");
+            if let Some(window) = window_needed {
                 let res = window.show();
                 if let Err(e) = res {
                     panic_app(&format!("Failed to show help window: {e}"));
@@ -269,9 +285,25 @@ pub async fn handle_menu_item_click(app: &AppHandle, id: String) {
             }
         }
         "preferences" => {
+            let windows = app.windows();
+            // hide the other windows
+            let window_help = windows.get("help");
+            let window_search = windows.get("search");
+            if let Some(window) = window_help {
+                let res = window.hide();
+                if let Err(e) = res {
+                    panic_app(&format!("Failed to hide help window: {e}"));
+                }
+            }
+            if let Some(window) = window_search {
+                let res = window.hide();
+                if let Err(e) = res {
+                    panic_app(&format!("Failed to hide search window: {e}"));
+                }
+            }
+
             // open the preferences window
             // test if the window is already open
-            let windows = app.windows();
             let window = windows.get("preferences");
             if let Some(window) = window {
                 let res = window.show();
@@ -295,9 +327,25 @@ pub async fn handle_menu_item_click(app: &AppHandle, id: String) {
             }
         }
         "search" => {
+            let windows = app.windows();
+            // hide the other windows
+            let window_help = windows.get("help");
+            let window_preferences = windows.get("preferences");
+            if let Some(window) = window_help {
+                let res = window.hide();
+                if let Err(e) = res {
+                    panic_app(&format!("Failed to hide help window: {e}"));
+                }
+            }
+            if let Some(window) = window_preferences {
+                let res = window.hide();
+                if let Err(e) = res {
+                    panic_app(&format!("Failed to hide preferences window: {e}"));
+                }
+            }
+
             // open the search window
             // test if the window is already open
-            let windows = app.windows();
             let window = windows.get("search");
             if let Some(window) = window {
                 let res = window.show();

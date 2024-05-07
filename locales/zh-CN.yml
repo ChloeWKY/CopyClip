@@ -66,7 +66,7 @@ help:
   clips_per_page: 定义托盘中每页显示的剪贴板历史记录的数量, 最大值为50。显示过多可能会导致系统托盘菜单溢出。
   max_clip_len_title: 每条记录在系统任务栏中显示的最大长度
   max_clip_len: 定义托盘中显示的剪贴板记录的最大长度。超过此长度的记录将被截断。
-  more_info: 更多详情请查看
+  more_info: 如需更多信息或提供任何反馈，请访问
 
 export:
   export_button: 导出数据到下载文件夹

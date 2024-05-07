@@ -84,7 +84,7 @@ help:
   max_clip_len_title: Maximale Clip Länge
   max_clip_len: Definiert die maximale Länge eines Clips, der im Tray angezeigt wird. 
     Clips, die länger als diese Länge sind, werden gekürzt.
-  more_info: Für weitere Informationen besuchen Sie bitte das Repo auf 
+  more_info: Für weitere Informationen oder um Feedback zu geben, besuchen Sie bitte das Repository auf 
 
 export:
   export_button: Drücke um deine Daten nach ~/Downloads zu exportieren

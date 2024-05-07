@@ -159,4 +159,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.os }}-prerelease
-          path: target\release\bundle\msi\
+          path: target\release\bundle\nsis\

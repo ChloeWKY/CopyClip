@@ -28,7 +28,7 @@ cargo check
 # cargo clippy for frontend
 cargo clippy --all-targets --all-features -- -D warnings
 # cargo clippy for backend
-cd src-tauri
+cd src-tauri && 
 cargo clippy --all-targets --all-features -- -D warnings
 cd ..
 ## #test the app in development mode

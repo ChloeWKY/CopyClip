@@ -40,6 +40,9 @@ search:
   min_id: Min Id
   max_id: Max Id
   press_to_search: Suche starten
+  note: " : Der Löschen-Button löscht die ausgewählte Zwischenablage dauerhaft. 
+    Einmal gelöscht, kann dieser Vorgang nicht rückgängig gemacht werden. 
+    Bitte gehen Sie vorsichtig vor."
 
 help:
   title: Hilfe

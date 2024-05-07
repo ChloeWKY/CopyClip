@@ -49,8 +49,9 @@ help:
   app_icon_title: App Symbol
   app_icon: Das App-Symbol wird immer im System-Tray angezeigt.
   open_menu_tray_title: Menü-Fach öffnen
-  open_menu_tray: Klicken Sie mit der rechten Maustaste auf das App-Symbol, um das Menü-Fach zu öffnen. 
-    Klicken Sie auf ein Menüelement, um den Clip auszuwählen, den Sie einfügen möchten.
+  open_menu_tray: Klicken Sie (oder für Windows-Benutzer, Rechtsklick) auf das App-Symbol, 
+    um das Menü-Tablett zu öffnen. Wählen Sie dann den Clip, den Sie einfügen möchten, 
+    indem Sie auf einen Menüpunkt klicken.
   open_window_title: Fenster öffnen
   open_window: Klicken Sie auf eines der Menüelemente "Einstellungen", "Suche" oder "Hilfe", 
     um das entsprechende Fenster zu öffnen. Sie können auch die Schaltflächen in der oberen Leiste verwenden, 
@@ -83,7 +84,7 @@ help:
   max_clip_len_title: Maximale Clip Länge
   max_clip_len: Definiert die maximale Länge eines Clips, der im Tray angezeigt wird. 
     Clips, die länger als diese Länge sind, werden gekürzt.
-  more_info: Für weitere Informationen besuchen Sie bitte das Repo auf 
+  more_info: Für weitere Informationen oder um Feedback zu geben, besuchen Sie bitte das Repository auf 
 
 export:
   export_button: Drücke um deine Daten nach ~/Downloads zu exportieren

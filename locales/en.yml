@@ -49,8 +49,8 @@ help:
   app_icon_title: App Icon
   app_icon: The app icon is always displayed in the system tray.
   open_menu_tray_title: Open Menu Tray
-  open_menu_tray: Right-click on the app icon to open the menu tray. 
-    Click on a menu item to select the clip you want to paste.
+  open_menu_tray: Click (or right-click for Windows users) on the app icon to open 
+    the menu tray. Then, select the clip you wish to paste by clicking on a menu item.
   open_window_title: Open Window
   open_window: Click on one of the "Preferences," "Search," or "Help" menu items 
     to open the corresponding window. You can also use the top bar buttons to 
@@ -82,7 +82,7 @@ help:
   max_clip_len_title: Max Clip Length
   max_clip_len: Defines the maximum length of a clip to be displayed in the tray. 
     Clips longer than this length will be truncated.
-  more_info: For more information please visit the repo on 
+  more_info: For additional information or to provide feedback, please visit the repository on 
 
 export:
   export_button: Press To Export Data to ~/Downloads

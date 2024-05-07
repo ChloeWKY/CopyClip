@@ -28,7 +28,7 @@ to monitor the app's network traffic.
 
 If you have any feedback,
 including feature requests, bug reports, etc.,
-please open an [issue](https://github.com/Alex222222222222/CopyClip/issues).
+please open an [issue](https://github.com/ChloeWKY/CopyClip/issues).
 
 We will do our best to address the issue.
 
@@ -53,7 +53,7 @@ More configuration options are on the way.
 The app supports MacOS, Windows and Ubuntu.
 For other Linux distributions, you can [build](#build) the app from source.
 
-Pre-built binaries can be found in [releases](https://github.com/Alex222222222222/CopyClip/releases).
+Download link: Navigate to the [releases](https://github.com/ChloeWKY/CopyClip/releases) page and locate the "Assets" section, where the latest pre-compiled executables for various operating systems are available for download. Please select the file appropriate for your system to proceed.
 
 ### MacOS
 
@@ -98,7 +98,7 @@ On MacOS, the log file is located at ~/Library/Logs/org.eu.huazifan.copyclip/log
 ### Download the source code
 
 ```bash
-git clone https://github.com/Alex222222222222/CopyClip.git
+git clone https://github.com/ChloeWKY/CopyClip.git
 cd CopyClip
 ```
 

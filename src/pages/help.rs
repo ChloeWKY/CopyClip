@@ -77,7 +77,7 @@ pub fn help() -> Html {
 
                 <div class="mx-3 my-2 text-2x">
                     { t!("help.more_info") }
-                    <a class="text-blue-500" href="https://github.com/Alex222222222222/CopyClip" target="_blank">{" GitHub"}</a>
+                    <a class="text-blue-500" href="https://github.com/ChloeWKY/CopyClip" target="_blank">{" GitHub"}</a>
                     {"."}
                 </div>
             </div>

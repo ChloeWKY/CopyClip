@@ -7,7 +7,8 @@ use crate::pages::search::{
     copy_clip_button::CopyClipButton, favourite_button::FavouriteClipButton,
     favourite_clip_filter::FavouriteClipFilter, fuzzy_search_text::SearchText,
     order::sort_search_res, pin_clip_button::PinClipButton, pin_clip_filter::PinClipFilter,
-    time_display::TimeDisplay, trash_clip_button::TrashClipButton,
+    time_display::TimeDisplay, trash_all_clips_button::TrashAllClipsButton,
+    trash_clip_button::TrashClipButton,
 };
 
 use super::{clip::SearchRes, SearchFullArgs};
@@ -71,7 +72,11 @@ pub fn search_res_table_html(props: &SearchResTableProps) -> Html {
                         <th class="border border-gray-200">{ "Clip" }</th>
                         // delete the clip button icon
                         <th class="border border-gray-200">
-                            <Icon icon_id={IconId::BootstrapTrash} class="mx-auto mt-0.5"/>
+                            // <Icon icon_id={IconId::BootstrapTrash} class="mx-auto mt-0.5"/>
+                            <TrashAllClipsButton
+                            search_res={props.search_res.clone()}
+                            search_res_dispatch={props.search_res_dispatch.clone()}
+                            ></TrashAllClipsButton>
                         </th>
                     </tr>
                 </thead>

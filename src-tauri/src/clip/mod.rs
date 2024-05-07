@@ -83,6 +83,33 @@ pub async fn delete_clip_from_database(
     Ok(())
 }
 
+// Delete all clips from the database
+#[tauri::command]
+pub async fn delete_all_clips_from_database(
+    clip_data: tauri::State<'_, ClipData>,
+    event_sender: tauri::State<'_, EventSender>,
+    ids: Vec<i64>,
+) -> Result<(), String> {
+    // a loop of delete_clip
+    for id in ids {
+        let res = clip_data.delete_clip(Some(id)).await;
+        if let Err(err) = res {
+            #[cfg(debug_assertions)]
+            println!("Error occurred: {}", err);
+            return Err(err.to_string());
+        }
+    }
+
+    event_sender.send(CopyClipEvent::TrayUpdateEvent).await;
+    event_sender
+        .send(CopyClipEvent::SendNotificationEvent(
+            "All clips deleted from database.".to_string(),
+        ))
+        .await;
+
+    Ok(())
+}
+
 #[tauri::command]
 pub async fn change_favourite_clip(
     clip_data: tauri::State<'_, ClipData>,

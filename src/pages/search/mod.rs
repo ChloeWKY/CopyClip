@@ -7,6 +7,8 @@ use yew::use_effect_with;
 use yew::{function_component, html, Callback, Html, TargetCast};
 
 use web_sys::{Event, HtmlInputElement};
+use yew_icons::Icon;
+use yew_icons::IconId;
 
 use crate::pages::search::search_method::SearchMethod;
 use crate::pages::search::search_res_table::SearchResTable;
@@ -35,6 +37,7 @@ mod search_method;
 mod search_res_table;
 mod search_state;
 mod time_display;
+mod trash_all_clips_button;
 mod trash_clip_button;
 
 #[derive(Clone, Debug, PartialEq, Deserialize, Serialize)]
@@ -331,6 +334,16 @@ pub fn search() -> Html {
                             class="dark:bg-white dark:text-black text-white"
                         > {t!("search.press_to_search")} </span>
                     </button>
+
+                    // Note for deletion buttion
+                    <div class="flex flex-row my-2">
+                        <Icon icon_id={IconId::BootstrapTrash}
+                            class="mx-1 mt-0.5 text-gray-400"/>
+                        <br />
+                        <label class="text-sm py-1 text-gray-400 block">
+                            {t!("search.note")}
+                        </label>
+                    </div>
 
                     // search state
                     <SearchStateHtml state={search_args.clone()}></SearchStateHtml>

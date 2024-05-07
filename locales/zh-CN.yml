@@ -36,6 +36,7 @@ search:
   min_id: 最小ID
   max_id: 最大ID
   press_to_search: 搜索
+  note: " ：删除按钮将永久移除所选剪辑。一旦删除，此操作无法撤销。请谨慎操作。"
 
 help:
   title: 帮助

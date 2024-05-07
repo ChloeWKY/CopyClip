@@ -124,6 +124,7 @@ fn main() {
             clip::switch_pinned_status,
             clip::copy_clip_to_clipboard,
             clip::delete_clip_from_database,
+            clip::delete_all_clips_from_database,
             clip::change_favourite_clip,
             clip::search::search_clips,
             clip::search::get_max_id,

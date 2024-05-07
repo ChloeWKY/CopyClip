@@ -40,6 +40,9 @@ search:
   min_id: Min Id
   max_id: Max Id
   press_to_search: Press To Search
+  note: " : The delete button permanently erases the chosen clip from 
+    your clipboard history. Once deleted, this action cannot be undone. 
+    Please proceed with care."
 
 help:
   title: Help

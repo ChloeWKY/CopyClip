@@ -63,8 +63,7 @@ help:
   delete_clip_title: 删除记录
   delete_clip: 在“搜索”窗口中，找到记录后， 
     您可以通过单击“删除”按钮来删除单项记录。 
-    使用表格顶栏的“删除”按钮可以同时删除多项记录。
-    请注意，删除后记录无法恢复，请谨慎操作。
+    使用表格顶栏的“删除”按钮可批量删除。
   auto_delete_duplications_title: 自动删除重复记录
   auto_delete_duplications: 启用后，将自动删除重复的记录。
   clips_per_page_title: 每页记录数量

@@ -76,11 +76,7 @@ help:
   delete_clip: In the "Search" window, you have the option to delete individual clips 
     by selecting the "Delete" button associated with each one. 
     If you need to delete several clips at once, simply click on the "Delete" button 
-    located in the search table header. 
-    Keep in mind that all deletions are final, 
-    and the clips will be permanently removed from your clipboard history. 
-    Please be careful when using this feature.
-  auto_delete_duplications_title: Auto Delete Duplications
+    located in the search table header.
   auto_delete_duplications: In the "Preferences" window, you can enable the 
     "Auto Delete Duplications" option to automatically remove duplicate clips 
     from the clipboard history.

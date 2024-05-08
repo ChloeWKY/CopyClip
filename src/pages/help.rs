@@ -44,6 +44,13 @@ pub fn help() -> Html {
                 <br />
 
                 <div class="flex items-center">
+                    <h3 class="text-left text-2xl m-0">{ t!("help.favourites_title")}</h3>
+                    <Icon icon_id={IconId::BootstrapHeart} class="mx-2 mt-0.5"/>
+                </div>
+                <div class="mx-3 my-2 text-2x">{ t!("help.favourites")}</div>
+                <br />
+
+                <div class="flex items-center">
                     <h3 class="text-left text-2xl m-0">{ t!("help.pinned_clips_title")}</h3>
                     <Icon icon_id={IconId::BootstrapPinAngle} class="mx-2 mt-0.5"/>
                 </div>
@@ -51,10 +58,10 @@ pub fn help() -> Html {
                 <br />
 
                 <div class="flex items-center">
-                    <h3 class="text-left text-2xl m-0">{ t!("help.favourites_title")}</h3>
-                    <Icon icon_id={IconId::BootstrapHeart} class="mx-2 mt-0.5"/>
+                    <h3 class="text-left text-2xl m-0">{ t!("help.delete_clip_title")}</h3>
+                    <Icon icon_id={IconId::BootstrapTrash} class="mx-2 mt-0.5"/>
                 </div>
-                <div class="mx-3 my-2 text-2x">{ t!("help.favourites")}</div>
+                <div class="mx-3 my-2 text-2x">{ t!("help.delete_clip")}</div>
                 <br />
 
                 <div class="flex items-center">

@@ -68,11 +68,14 @@ help:
     einen Clip anheften, indem Sie auf die Schaltfläche "Anheften" klicken. 
     Angeheftete Clips werden immer am nächsten zum System-Tray angezeigt.
   favourites_title: Favoriten
-  favourites: Im "Suchen"-Fenster können Sie, 
-    nachdem Sie Clips gefunden haben, einen Clip als Favoriten kennzeichnen, 
-    indem Sie auf die Schaltfläche "Favorit" klicken. 
-    Favorisierte Clips sind jederzeit über ein Untermenü 
-    unter dem Menüpunkt "Favoriten" zugänglich.
+  favourites: Im Fnester “Suchen" können Sie einen Clip löschen, 
+    indem Sie auf die Schaltfläche "Löschen" klicken. 
+    Mehrere Clips können Sie gleichzeitig löschen, 
+    indem Sie auf die Schaltfläche "Löschen" in der Kopfzeile der Suchtabelle klicken. 
+    Bitte beachten Sie, dass alle gelöschten Clips dauerhaft 
+      aus der Zwischenablagen-Historie entfernt werden. 
+    Gehen Sie beim Gebrauch dieser Funktion bitte vorsichtig vor.
+  delete_clip_title: Clip löschen
   auto_delete_duplications_title: Duplikate automatisch löschen
   auto_delete_duplications: Im "Einstellungen"-Fenster können Sie 
     die Option "Doppelte Einträge automatisch löschen" aktivieren, 

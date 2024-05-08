@@ -36,7 +36,7 @@ search:
   min_id: 最小ID
   max_id: 最大ID
   press_to_search: 搜索
-  note: " ：删除按钮将永久移除所选剪辑。一旦删除，此操作无法撤销。请谨慎操作。"
+  note: " ：删除按钮将永久移除所选记录。删除后记录无法恢复。请谨慎操作。"
 
 help:
   title: 帮助
@@ -60,6 +60,10 @@ help:
   favourites: 在“搜索”窗口中，找到记录后， 
     您可以点击爱心图标来收藏记录。 
     之后您可以在“收藏夹”中查看这些记录。
+  delete_clip_title: 删除记录
+  delete_clip: 在“搜索”窗口中，找到记录后， 
+    您可以通过单击“删除”按钮来删除单项记录。 
+    使用表格顶栏的“删除”按钮可批量删除。
   auto_delete_duplications_title: 自动删除重复记录
   auto_delete_duplications: 启用后，将自动删除重复的记录。
   clips_per_page_title: 每页记录数量

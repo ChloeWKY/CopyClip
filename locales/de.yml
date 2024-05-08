@@ -73,6 +73,11 @@ help:
     indem Sie auf die Schaltfläche "Favorit" klicken. 
     Favorisierte Clips sind jederzeit über ein Untermenü 
     unter dem Menüpunkt "Favoriten" zugänglich.
+  delete_clip_title: Clip löschen
+  delete_clip: Im Fenster “Suchen" können Sie einen Clip löschen, 
+    indem Sie auf die Schaltfläche "Löschen" klicken. 
+    Mehrere Clips können Sie gleichzeitig löschen, 
+    indem Sie auf die Schaltfläche "Löschen" in der Kopfzeile der Suchtabelle klicken. 
   auto_delete_duplications_title: Duplikate automatisch löschen
   auto_delete_duplications: Im "Einstellungen"-Fenster können Sie 
     die Option "Doppelte Einträge automatisch löschen" aktivieren, 

@@ -42,7 +42,7 @@ search:
   press_to_search: Press To Search
   note: " : The delete button permanently erases the chosen clip from 
     your clipboard history. Once deleted, this action cannot be undone. 
-    Please proceed with care."
+    Please use it with care."
 
 help:
   title: Help
@@ -72,7 +72,11 @@ help:
     you can mark a clip as a favorite by clicking on the "Favorite" button. 
     Favorited clips will always be accessible through a submenu 
     under the "Favorites" menu item.
-  auto_delete_duplications_title: Auto Delete Duplications
+  delete_clip_title: Delete Clip(s)
+  delete_clip: In the "Search" window, you have the option to delete individual clips 
+    by selecting the "Delete" button associated with each one. 
+    If you need to delete several clips at once, simply click on the "Delete" button 
+    located in the search table header.
   auto_delete_duplications: In the "Preferences" window, you can enable the 
     "Auto Delete Duplications" option to automatically remove duplicate clips 
     from the clipboard history.

@@ -20,7 +20,7 @@ jobs:
           node-version: '20'
 
       - name: Checkout repository code
-        uses: actions/checkout@v4.2.0
+        uses: actions/checkout@v4
 
       - name: make out directory
         run: mkdir out

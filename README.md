@@ -93,6 +93,8 @@ Please set the log mode to trace to record the most detailed log possible.
 
 On MacOS, the log file is located at ~/Library/Logs/org.eu.huazifan.copyclip/log.
 
+On Windows, the log file is located at C:\Users\<username>\AppData\Roaming\org.eu.huazifan.copyclip\logs\log.
+
 ## Build
 
 ### Download the source code

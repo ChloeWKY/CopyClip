@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: Checkout repository code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
       - name: Install Linux dependencies
         if: matrix.os == 'ubuntu-latest'

@@ -106,15 +106,29 @@ jobs:
           cargo --version
           rustc --version
 
-      - name: Install tauri-cli, trunk
+       - name: Install tauri-cli
         continue-on-error: true
         run: |
-            cargo install tauri-cli --version 1.5.9
-            cargo install trunk
-      
-      - name: Verify tauri-cli, trunk installation
+            cargo install tauri-cli
+      - name: Verify tauri-cli installation
         run: |
           cargo tauri --version
+      
+      - name: Install wasm-bindgen-cli
+        continue-on-error: true
+        run: |
+            cargo install wasm-bindgen-cli
+      
+      - name: Verify wasm-bindgen-cli installation
+        run: |
+          wasm-bindgen --version
+      - name: Install trunk
+        continue-on-error: true
+        run: |
+            cargo install trunk
+      
+      - name: Verify trunk installation
+        run: |
           trunk --version
       
       - name: Install wasm-opt for ubuntu and macos

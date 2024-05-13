@@ -1,6 +1,6 @@
 <p align="center">
 <a href="https://github.com/ChloeWKY/CopyClip/releases">
-    <img src="./app-icon.png" width=90 height=90>
+    <img src="./app-icon-gray.png" width=90 height=90>
 </a>
 
 <h2 align="center">Copy Clip</h2>

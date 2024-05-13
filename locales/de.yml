@@ -63,7 +63,7 @@ help:
   search_title: Suche
   search: Im Fenster "Suche" können Sie Clips nach Text, Zeit, Score usw. suchen. 
     Wenn das Suchfeld leer ist, werden die neuesten Clips bis zu "Anzahl der Ergebnisse" angezeigt.
-  pinned_clips_title: Angeheftete Clips
+  pinned_clips_title: Clips anheften
   pinned_clips: Im Fenster "Suche" können Sie nach dem Auffinden von Clips 
     einen Clip anheften, indem Sie auf die Schaltfläche "Anheften" klicken. 
     Angeheftete Clips werden immer am nächsten zum System-Tray angezeigt.

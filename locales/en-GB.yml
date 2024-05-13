@@ -63,7 +63,7 @@ help:
   search: In the "Search" window, you can look for clips by text, time, score, etc. 
     If the search box is empty, the most recent clips up to the "Number of Results" 
     will be displayed.
-  pinned_clips_title: Pinned Clips
+  pinned_clips_title: Pin Clips
   pinned_clips: In the "Search" window, after finding clips, 
     you can pin a clip by clicking on the "Pin" button. 
     Pinned clips will always appear closest to the system tray.

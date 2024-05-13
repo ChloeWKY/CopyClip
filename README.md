@@ -1,6 +1,17 @@
-# Copy Clip
+<p align="center">
+<a href="https://github.com/ChloeWKY/CopyClip/releases">
+    <img src="./app-icon.png" width=90 height=90>
+</a>
 
-A cross-platform, feature-rich app designed to manage your clipboard history.
+<h2 align="center">Copy Clip</h2>
+
+<p align="center">
+    Versatile clipboard history tool that enables seamless clipboard management across MacOS, Linux, and Windows platforms. 
+</p>
+</p>
+
+<br>
+
 
 ## Disclaimer
 

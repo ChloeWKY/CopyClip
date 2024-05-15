@@ -1,6 +1,50 @@
-# Copy Clip
+<p align="center">
+<a href="https://github.com/ChloeWKY/CopyClip/releases">
+    <img src="./app-icon-gray.png" width=90 height=90>
+</a>
 
-A cross-platform, feature-rich app designed to manage your clipboard history.
+<h2 align="center">Copy Clip</h2>
+
+<p align="center">
+    Versatile clipboard history tool that enables seamless clipboard management across MacOS, Linux, and Windows platforms. 
+</p>
+</p>
+
+<br>
+
+## Features:
+
+**Persistent Presence**: The application's icon is ever-present in your system tray for easy access to your clipboard history at any time.
+
+**Tray Menu Access**: Right-click (Windows) or click (Mac/Linux) on the Clipboard Companion icon to unveil the menu tray, where you can swiftly select and paste any stored clip.
+
+**Dynamic Windows**: One-click access from the menu tray to open dedicated "Preferences," "Search," or "Help" windows, with intuitive top bar navigation for in-app window switching.
+
+**Controlled Monitoring**: Toggle clipboard tracking on demand with the "Pause Monitoring" feature, resuming whenever you choose to ensure your clipboard captures only what you need.
+
+**Advanced Searchability**: Employ powerful search capabilities within the app to locate specific clips by content, timestamp, or frequency of use, with smart display of recent clips in absence of search queries.
+
+**Favorites Curation**: Highlight and access your most valued clips quickly by marking them as favorites through the "Search" interface, ensuring they're always at your fingertips.
+
+**Priority Pins**: Elevate essential clips for top-tier accessibility by pinning them, allowing for immediate retrieval at the top of the system tray list.
+
+**Selective Deletion**: Manage your clipboard with ease by removing unwanted clips individually, or in bulk, via the clear "Delete" options associated with each clip or from the search table header.
+
+**Duplicate Management**: Enable "Auto Delete Duplications" in the "Preferences" to keep your clipboard history streamlined and free of redundancies.
+
+**Customizable Viewing**: Tailor the number of clips displayed per page in the tray and set a maximum clip length to ensure a clean, organized view that fits your workflow.
+
+**Multilingual Interface**: Seamlessly switch between languages, including Chinese, English, and German, directly from the "Preferences" window to cater to a diverse user base and enhance usability across global audiences.
+
+## Download
+
+Download latest version of Copy Clip from [Github releases](https://github.com/ChloeWKY/CopyClip/releases) for free.
+
+Navigate to the [releases](https://github.com/ChloeWKY/CopyClip/releases) page and locate the "Assets" section, where the latest pre-compiled executables for various operating systems are available for download. 
+
+The app supports MacOS, Windows and Ubuntu.
+For other Linux distributions, you can [build](#build) the app from source.
+
 
 ## Disclaimer
 
@@ -31,29 +75,6 @@ including feature requests, bug reports, etc.,
 please open an [issue](https://github.com/ChloeWKY/CopyClip/issues).
 
 We will do our best to address the issue.
-
-## Configuration
-
-Below is an explanation of the app's configurations.
-
-| Name                        | Default Value | Description                                                                                      |
-|-----------------------------|---------------|--------------------------------------------------------------------------------------------------|
-| clips per page              | 20            | Defines the number of clips to display on one page in the tray, with a maximum value of 50. Displaying too many can cause the system tray menu to overflow. |
-| max clip length             | 50            | When a clip is too long, it's truncated to stay under max-clip-length to fit in the tray.       |
-| log level filter            | info          | Sets the app's log level: `trace`, `info`, `debug`, `warn`, `error`, `off`—from most to least detailed. |
-| dark mode                   | off           | Toggles dark mode on or off.                                                                     |
-| Enable Auto Delete Duplications | false    | If set to true, the app will delete a previous instance of a clip if it is copied again.        |
-| Pinned Clips Add            | None          | Text to be pinned.                                                                               |
-| Pinned Clips Remove         | None          | Text of the pinned clip you want to remove.                                                      |
-
-More configuration options are on the way.
-
-## Install
-
-The app supports MacOS, Windows and Ubuntu.
-For other Linux distributions, you can [build](#build) the app from source.
-
-Download link: Navigate to the [releases](https://github.com/ChloeWKY/CopyClip/releases) page and locate the "Assets" section, where the latest pre-compiled executables for various operating systems are available for download. Please select the file appropriate for your system to proceed.
 
 ### MacOS
 
@@ -189,16 +210,6 @@ cargo tauri dev
 ## Contributing
 
 See [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) for more information.
-
-## TODO
-
-- [x] Search Page
-- [x] Configuration Page
-- [ ] Explanation for configurations
-- [ ] Sign the app for MacOS builds
-- [ ] Change the app icon so it is visible against white backgrounds
-- [x] Export the history to a file
-  - [ ] History import functionality
 
 ## Contributors
 

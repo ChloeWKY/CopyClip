@@ -11,29 +11,29 @@ use yew_router::prelude::Link;
 pub fn head_bar() -> Html {
     html! {
         <div class="m-2 p-2">
-            <div class="grid grid-cols-4 content-center gap-4 text-xl rounded-md">
-                <div class="mx-2 text-center">
+            <div class="flex content-center gap-4 text-xl rounded-md">
+                <div class="flex-grow mx-2 text-center">
                     <a class="head-bar-button">
                         <Link<Route> to={Route::Preferences}>
                             {t!("head_bar.preferences")}
                         </Link<Route>>
                     </a>
                 </div>
-                <div class="mx-2 text-center">
+                <div class="flex-grow mx-2 text-center">
                     <a class="head-bar-button">
                         <Link<Route> to={Route::Search}>
                             {t!("head_bar.search")}
                         </Link<Route>>
                     </a>
                 </div>
-                <div class="mx-2 text-center">
+                <div class="flex-grow mx-2 text-center">
                     <a class="head-bar-button">
                         <Link<Route> to={Route::Help}>
                             {t!("head_bar.help")}
                         </Link<Route>>
                     </a>
                 </div>
-                <div class="mx-2 text-center">
+                <div class="flex-grow mx-2 text-center">
                     <a class="head-bar-button" href="https://github.com/Alex222222222222/CopyClip" target="_blank">{"GitHub"}</a>
                 </div>
             </div>

@@ -7,25 +7,25 @@ on:
   pull_request:
     types:
       - closed
-    paths-ignore:
-      - "package.json"
-      - "package-lock.json"
-      - "yarn.lock"
-      - "pnpm-lock.yaml"
-      - "README.md"
-      - ".devcontainer/**"
-      - ".github/**"
-      - "docs/**"
-      - "CODE_OF_CONDUCT.md"
+    paths:
+      - "!package.json"
+      - "!package-lock.json"
+      - "!yarn.lock"
+      - "!pnpm-lock.yaml"
+      - "!README.md"
+      - "!.devcontainer/**"
+      - "!.github/**"
+      - "!docs/**"
+      - "!CODE_OF_CONDUCT.md"
 
 jobs:
   build:
     name: build for pre-release
-    if: github.event.pull_request.merged == true
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest, macos-11, macos-12]
 
     runs-on: ${{ matrix.os }}
 
@@ -45,7 +45,7 @@ jobs:
           sudo apt install -y libxcb-xkb-dev libxcb-xfixes0-dev
 
       - name: set up rust cache for macos and ubuntu
-        if : matrix.os != 'windows-latest'
+        if: matrix.os != 'windows-latest'
         uses: actions/cache@v3
         with:
           path: |
@@ -58,7 +58,7 @@ jobs:
           key: ${{ matrix.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
 
       - name: set up rust cache for windows
-        if : matrix.os == 'windows-latest'
+        if: matrix.os == 'windows-latest'
         uses: actions/cache@v3
         with:
           path: |
@@ -68,7 +68,7 @@ jobs:
 
       - name: set up npm cache for macos and ubuntu
         uses: actions/cache@v3
-        if : matrix.os != 'windows-latest'
+        if: matrix.os != 'windows-latest'
         with:
           path: |
             node_modules
@@ -77,7 +77,7 @@ jobs:
 
       - name: set up npm cache for windows
         uses: actions/cache@v3
-        if : matrix.os == 'windows-latest'
+        if: matrix.os == 'windows-latest'
         with:
           path: |
             %AppData%\npm-cache
@@ -87,7 +87,7 @@ jobs:
       - name: Install nodejs
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
+          node-version: "latest"
 
       - name: Set up tailwindcss
         run: |
@@ -109,16 +109,28 @@ jobs:
       - name: Install tauri-cli
         continue-on-error: true
         run: |
-            cargo install tauri-cli --version 1.5.9
+          cargo install tauri-cli
+
+      - name: Verify tauri-cli installation
+        run: |
+          cargo tauri --version
+      
+      - name: Install wasm-bindgen-cli
+        continue-on-error: true
+        run: |
+          cargo install wasm-bindgen-cli
+      
+      - name: Verify wasm-bindgen-cli installation
+        run: |
+          wasm-bindgen --version
 
       - name: Install trunk
         continue-on-error: true
         run: |
             cargo install trunk
       
-      - name: Verify tauri-cli, trunk installation
+      - name: Verify trunk installation
         run: |
-          cargo tauri --version
           trunk --version
       
       - name: Install wasm-opt for ubuntu and macos
@@ -128,7 +140,7 @@ jobs:
             cargo install wasm-opt
       
       - name: Verify wasm-opt installation for ubuntu and macos
-        if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
+        if: matrix.os != 'windows-latest'
         run: |
           wasm-opt --version
 
@@ -149,6 +161,18 @@ jobs:
           name: ${{ matrix.os }}-prerelease
           path: target/release/bundle/dmg
 
+      - if: matrix.os == 'macos-12'
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.os }}-prerelease
+          path: target/release/bundle/dmg
+
+      - if: matrix.os == 'macos-11'
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.os }}-prerelease
+          path: target/release/bundle/dmg
+
       - if: matrix.os == 'ubuntu-latest'
         uses: actions/upload-artifact@v3
         with:
@@ -159,4 +183,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.os }}-prerelease
-          path: target\release\bundle\nsis\
+          path: target\release\bundle\msi\

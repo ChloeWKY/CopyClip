@@ -7,25 +7,25 @@ on:
   pull_request:
     types:
       - closed
-    paths-ignore:
-      - "package.json"
-      - "package-lock.json"
-      - "yarn.lock"
-      - "pnpm-lock.yaml"
-      - "README.md"
-      - ".devcontainer/**"
-      - ".github/**"
-      - "docs/**"
-      - "CODE_OF_CONDUCT.md"
+    paths:
+      - "!package.json"
+      - "!package-lock.json"
+      - "!yarn.lock"
+      - "!pnpm-lock.yaml"
+      - "!README.md"
+      - "!.devcontainer/**"
+      - "!.github/**"
+      - "!docs/**"
+      - "!CODE_OF_CONDUCT.md"
 
 jobs:
   build:
     name: build for pre-release
-    if: github.event.pull_request.merged == true
+    if: github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true
     strategy:
       fail-fast: true
       matrix:
-        os: [ubuntu-latest, macos-latest, windows-latest]
+        os: [ubuntu-latest, macos-latest, windows-latest, macos-11, macos-12]
 
     runs-on: ${{ matrix.os }}
 
@@ -87,7 +87,7 @@ jobs:
       - name: Install nodejs
         uses: actions/setup-node@v4
         with:
-          node-version: 'latest'
+          node-version: "latest"
 
       - name: Set up tailwindcss
         run: |
@@ -140,7 +140,7 @@ jobs:
             cargo install wasm-opt
       
       - name: Verify wasm-opt installation for ubuntu and macos
-        if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
+        if: matrix.os != 'windows-latest'
         run: |
           wasm-opt --version
 
@@ -156,6 +156,18 @@ jobs:
           cargo tauri build
 
       - if: matrix.os == 'macos-latest'
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.os }}-prerelease
+          path: target/release/bundle/dmg
+
+      - if: matrix.os == 'macos-12'
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.os }}-prerelease
+          path: target/release/bundle/dmg
+
+      - if: matrix.os == 'macos-11'
         uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.os }}-prerelease

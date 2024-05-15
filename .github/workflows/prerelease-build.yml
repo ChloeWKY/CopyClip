@@ -127,7 +127,7 @@ jobs:
       - name: Install trunk
         continue-on-error: true
         run: |
-            cargo install trunk
+          cargo install trunk
       
       - name: Verify trunk installation
         run: |
@@ -137,7 +137,7 @@ jobs:
         if: matrix.os != 'windows-latest'
         continue-on-error: true
         run: |
-            cargo install wasm-opt
+          cargo install wasm-opt
       
       - name: Verify wasm-opt installation for ubuntu and macos
         if: matrix.os != 'windows-latest'

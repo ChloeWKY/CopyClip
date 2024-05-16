@@ -114,12 +114,12 @@ jobs:
       - name: Verify tauri-cli installation
         run: |
           cargo tauri --version
-      
+
       - name: Install wasm-bindgen-cli
         continue-on-error: true
         run: |
           cargo install wasm-bindgen-cli
-      
+
       - name: Verify wasm-bindgen-cli installation
         run: |
           wasm-bindgen --version
@@ -128,17 +128,17 @@ jobs:
         continue-on-error: true
         run: |
           cargo install trunk
-      
+
       - name: Verify trunk installation
         run: |
           trunk --version
-      
+
       - name: Install wasm-opt for ubuntu and macos
         if: matrix.os != 'windows-latest'
         continue-on-error: true
         run: |
           cargo install wasm-opt
-      
+
       - name: Verify wasm-opt installation for ubuntu and macos
         if: matrix.os != 'windows-latest'
         run: |
@@ -178,7 +178,7 @@ jobs:
         with:
           name: ${{ matrix.os }}-prerelease
           path: target/release/bundle/deb/
-      
+
       - if: matrix.os == 'windows-latest'
         uses: actions/upload-artifact@v3
         with:

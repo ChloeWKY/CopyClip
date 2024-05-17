@@ -18,7 +18,7 @@ pub struct TrashAllClipsButtonProps {
 
 #[derive(Debug, Serialize)]
 struct TrashAllClipsArgs {
-    pub ids: Vec<i64>,
+    pub ids: Vec<u64>,
 }
 
 #[function_component(TrashAllClipsButton)]
@@ -27,7 +27,7 @@ pub fn trash_all_clips_button(props: &TrashAllClipsButtonProps) -> Html {
     let res = search_res.res.lock().unwrap();
     let search_res_dispatch = props.search_res_dispatch.clone();
     // get a vector of all ids in res
-    let ids: Vec<i64> = res.iter().map(|x| x.id).collect();
+    let ids: Vec<u64> = res.iter().map(|x| x.clip.id).collect();
 
     let trash_all_clip_button_on_click = Callback::from(move |_| {
         let search_res_dispatch = search_res_dispatch.clone();

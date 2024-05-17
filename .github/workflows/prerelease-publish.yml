@@ -3,14 +3,19 @@
 name: Pre-release Publish
 
 on:
-  workflow_dispatch:
-  workflow_run:
-    workflows: [Pre-release Build]
-    types:
-      - completed
+  workflow_dispatch: # manual trigger release
+    inputs:
+      create_release:
+        description: 'Create new release'
+        required: true
+        type: boolean
+      release_version:
+        description: "Version (e.g. 1.0.0)"
+        required: true
+        type: string
 
 jobs:
-  publish:
+  on-success:
     name: Publish the package
     runs-on: ubuntu-latest
     steps:

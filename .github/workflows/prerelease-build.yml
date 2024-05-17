@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   pull_request:
     types:
-      - closed
+      - opened
     paths:
       - "!package.json"
       - "!package-lock.json"

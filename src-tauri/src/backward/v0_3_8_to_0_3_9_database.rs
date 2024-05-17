@@ -31,6 +31,15 @@ use crate::{database::label_name_to_table_name, error::Error};
 pub fn upgrade(connection: &Connection) -> Result<(), Error> {
     debug!("update from 0.3.8 to 0.3.9");
 
+    // delete duplicate clips
+    match connection.execute(
+        "DELETE FROM clips WHERE rowid NOT IN (SELECT MIN(rowid) FROM clips GROUP BY id)",
+        [],
+    ) {
+        Ok(_) => (),
+        Err(err) => return Err(Error::DatabaseWriteErr(err.to_string())),
+    };
+
     // create new clips table
     match connection.execute(
         "CREATE TABLE IF NOT EXISTS clips_new (
@@ -47,8 +56,8 @@ pub fn upgrade(connection: &Connection) -> Result<(), Error> {
 
     // insert the old data into new table
     match connection.execute(
-        "INSERT INTO clips_new(id, type, text, timestamp)
-        SELECT id, 0 as type, text, timestamp FROM clips",
+        "INSERT INTO clips_new(type, text, timestamp)
+        SELECT 0 as type, text, timestamp FROM clips",
         [],
     ) {
         Ok(_) => (),
@@ -91,6 +100,7 @@ pub fn upgrade(connection: &Connection) -> Result<(), Error> {
 
     // get all the labels from the labels table
     let labels = vec!["pinned".to_string(), "favourite".to_string()];
+    debug!("got all the labels from the labels table");
 
     // create the label_base32(label_name) tables for each label
     for label in labels {
@@ -110,6 +120,7 @@ pub fn upgrade(connection: &Connection) -> Result<(), Error> {
             Err(err) => return Err(Error::DatabaseWriteErr(err.to_string())),
         };
     }
+    debug!("created the label_base32(label_name) tables for each label");
 
     // insert the pinned clips into the new table
     match connection.execute(
@@ -123,6 +134,7 @@ pub fn upgrade(connection: &Connection) -> Result<(), Error> {
         Ok(_) => (),
         Err(err) => return Err(Error::DatabaseWriteErr(err.to_string())),
     };
+    debug!("inserted the pinned clips into the new table");
 
     // insert the favourite clips into the new table
     match connection.execute(
@@ -136,6 +148,7 @@ pub fn upgrade(connection: &Connection) -> Result<(), Error> {
         Ok(_) => (),
         Err(err) => return Err(Error::DatabaseWriteErr(err.to_string())),
     };
+    debug!("inserted the favourite clips into the new table");
 
     // drop the old table
     match connection.execute("DROP TABLE clips_old", []) {

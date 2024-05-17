@@ -109,21 +109,24 @@ pub async fn delete_clip_from_database(
 // Delete all clips from the database
 #[tauri::command]
 pub async fn delete_all_clips_from_database(
-    clip_data: tauri::State<'_, ClipData>,
+    app: tauri::AppHandle,
+    clip_state: tauri::State<'_, ClipStateMutex>,
     event_sender: tauri::State<'_, EventSender>,
-    ids: Vec<i64>,
+    ids: Vec<u64>,
 ) -> Result<(), String> {
+    let mut clip_state_mutex = clip_state.clip_state.lock().await;
     // a loop of delete_clip
     for id in ids {
-        let res = clip_data.delete_clip(Some(id)).await;
+        let res = clip_state_mutex.delete_clip(&app, Some(id)).await;
         if let Err(err) = res {
             #[cfg(debug_assertions)]
             println!("Error occurred: {}", err);
             return Err(err.to_string());
         }
     }
+    drop(clip_state_mutex);
 
-    event_sender.send(CopyClipEvent::TrayUpdateEvent).await;
+    event_sender.send(CopyClipEvent::RebuildTrayMenuEvent).await;
     event_sender
         .send(CopyClipEvent::SendNotificationEvent(
             "All clips deleted from database.".to_string(),
